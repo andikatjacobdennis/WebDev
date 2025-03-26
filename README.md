@@ -1,9 +1,9 @@
-# WebDev
+# WebExperiments
 
 This repository contains two simple demo HTML files:
 
-1. `html-css-demo.html` - Demonstrates basic HTML and CSS usage.
-2. `javascript-demo.html` - Showcases JavaScript functionality within an HTML page.
+1. [pages/html-css-demo.html](pages/html-css-demo.html) - Demonstrates basic HTML and CSS usage.
+2. [pages/javascript-demo.html](pages/javascript-demo.html) - Showcases JavaScript functionality within an HTML page.
 
 ## File Descriptions
 
