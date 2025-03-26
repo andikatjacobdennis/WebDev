@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A comprehensive HTML5 example page" />
+    <title>HTML5 Example Page</title>
+    <style></style>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Structural Elements -->
+    <header>
+      <h1>Welcome to Our HTML5 Example Page</h1>
+      <nav>
+        <ul>
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="section1">
+        <h2>Section 1: Text Elements</h2>
+        <article>
+          <h3>Article Title</h3>
+          <p>
+            This is a paragraph with some <strong>strong text</strong>,
+            <em>emphasized text</em>, and <mark>highlighted text</mark>.
+          </p>
+          <p>
+            Here's some <small>small text</small> and
+            <del>deleted text</del> with <ins>inserted text</ins>.
+          </p>
+          <p>Subscript: H<sub>2</sub>O and Superscript: x<sup>2</sup></p>
+          <blockquote cite="https://example.com">
+            This is a blockquote with a citation.
+          </blockquote>
+          <pre>
+            <code>
+// This is preformatted code
+function example() {
+      return "Hello World!";
+}
+            </code>
+          </pre>
+        </article>
+      </section>
+
+      <section id="section2">
+        <h2>Section 2: Media & Interactive Elements</h2>
+        <article>
+          <h3>Images</h3>
+          <figure>
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Placeholder image"
+              width="400"
+              height="200"
+            />
+            <figcaption>Figure 1: A placeholder image</figcaption>
+          </figure>
+
+          <h3>Audio</h3>
+          <audio controls>
+            <source src="audio.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <h3>Video</h3>
+          <video width="400" controls>
+            <source src="movie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <h3>Canvas</h3>
+          <canvas
+            id="myCanvas"
+            width="200"
+            height="100"
+            style="border: 1px solid #000"
+          ></canvas>
+          <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 150, 75);
+          </script>
+
+          <h3>SVG</h3>
+          <svg width="100" height="100">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="green"
+              stroke-width="4"
+              fill="yellow"
+            />
+          </svg>
+
+          <h3>Interactive Elements</h3>
+          <details>
+            <summary>Click to expand</summary>
+            <p>Hidden content revealed when clicked.</p>
+          </details>
+
+          <progress value="70" max="100"></progress>
+          <meter value="2" min="0" max="10">2 out of 10</meter>
+        </article>
+      </section>
+
+      <section id="section3">
+        <h2>Section 3: Forms & Tables</h2>
+        <article>
+          <h3>Form Example</h3>
+          <form action="/submit" method="post">
+            <fieldset>
+              <legend>Personal Information</legend>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+              /><br /><br />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+              /><br /><br />
+
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+              /><br /><br />
+
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              /><br /><br />
+
+              <label for="birthday">Birthday:</label>
+              <input type="date" id="birthday" name="birthday" /><br /><br />
+
+              <label for="color">Favorite Color:</label>
+              <input type="color" id="color" name="color" /><br /><br />
+
+              <label for="website">Website:</label>
+              <input type="url" id="website" name="website" /><br /><br />
+
+              <label for="quantity">Quantity (1-5):</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="5"
+              /><br /><br />
+
+              <label for="range">Volume:</label>
+              <input
+                type="range"
+                id="range"
+                name="range"
+                min="0"
+                max="100"
+              /><br /><br />
+
+              <label for="file">Upload File:</label>
+              <input type="file" id="file" name="file" /><br /><br />
+
+              <label for="browser">Choose browser:</label>
+              <input list="browsers" id="browser" name="browser" />
+              <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Safari"></option></datalist
+              ><br /><br />
+
+              <label for="cars">Choose a car:</label>
+              <select id="cars" name="cars">
+                <optgroup label="German Cars">
+                  <option value="audi">Audi</option>
+                  <option value="bmw">BMW</option>
+                </optgroup>
+                <optgroup label="American Cars">
+                  <option value="ford">Ford</option>
+                  <option value="chevrolet">Chevrolet</option>
+                </optgroup></select
+              ><br /><br />
+
+              <label>Gender:</label>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label><br /><br />
+
+              <label>Interests:</label>
+              <input
+                type="checkbox"
+                id="sports"
+                name="interests"
+                value="sports"
+              />
+              <label for="sports">Sports</label>
+              <input
+                type="checkbox"
+                id="music"
+                name="interests"
+                value="music"
+              />
+              <label for="music">Music</label><br /><br />
+
+              <label for="message">Message:</label><br />
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+              ></textarea
+              ><br /><br />
+
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </fieldset>
+          </form>
+
+          <h3>Table Example</h3>
+          <table>
+            <caption>
+              Monthly Savings
+            </caption>
+            <colgroup>
+              <col span="2" style="background-color: #f2f2f2" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Savings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>January</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>February</td>
+                <td>$80</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td>$180</td>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+      </section>
+
+      <aside>
+        <h3>Related Links</h3>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/TR/html52/">HTML5 Specification</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              >MDN HTML Documentation</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 HTML5 Example Page. All rights reserved.</p>
+      <address>
+        Contact: <a href="mailto:info@example.com">info@example.com</a>
+      </address>
+      <time datetime="2025-03-26">March 26, 2026</time>
+    </footer>
+  </body>
+</html>
