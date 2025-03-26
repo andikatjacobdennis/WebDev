@@ -1,4 +1,4 @@
-# WebExperiments
+# Web Experiments
 
 This repository contains two simple demo HTML files:
 
