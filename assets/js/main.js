@@ -165,8 +165,9 @@ function demoErrorHandling(isValid) {
 }
 // Modern JavaScript Features Demo
 function demoModernFeatures() {
+    var _a, _b, _c, _d, _e, _f;
     const obj = { a: { b: { c: "Hello" } } };
-    const result1 = obj.a?.b?.c ?? "Default Value";
-    const result2 = obj.x?.y?.z ?? "Default Value";
+    const result1 = (_c = (_b = (_a = obj.a) === null || _a === void 0 ? void 0 : _a.b) === null || _b === void 0 ? void 0 : _b.c) !== null && _c !== void 0 ? _c : "Default Value";
+    const result2 = (_f = (_e = (_d = obj.x) === null || _d === void 0 ? void 0 : _d.y) === null || _e === void 0 ? void 0 : _e.z) !== null && _f !== void 0 ? _f : "Default Value";
     document.getElementById("modernFeaturesResult").innerText = `Optional Chaining Result: ${result1}, Nullish Coalescing Result: ${result2}`;
 }
