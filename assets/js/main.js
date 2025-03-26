@@ -1,6 +1,6 @@
 "use strict";
 // Simple test to verify the script loaded
-console.log("Main TS loaded");
+console.log("Main JS loaded");
 // 1. Class Inheritance Demo
 function demoInheritance() {
     class Animal {
@@ -125,7 +125,7 @@ function demoObserver() {
     subject.subscribe((data) => (document.getElementById("observerResult").innerText += `Observer notified with data: ${data}\n`));
     subject.notify("New data available!");
 }
-// Performance Optimization - Memoization Demo
+// 11. Performance Optimization - Memoization Demo
 const memoizeFactorial = (function () {
     const cache = {};
     return function factorial(n) {
@@ -141,7 +141,7 @@ function demoMemoization() {
     const result1 = memoizeFactorial(5);
     document.getElementById("memoizationResult").innerText = `Factorial of 5 (memoized): ${result1}`;
 }
-// Debouncing implementation
+// 12. Debouncing implementation
 let debounceTimeout;
 document.getElementById("debounceButton").addEventListener("click", () => {
     clearTimeout(debounceTimeout);
@@ -149,7 +149,7 @@ document.getElementById("debounceButton").addEventListener("click", () => {
         document.getElementById("debounceResult").innerText += "Button clicked!\n";
     }, 500);
 });
-// Error Handling Demo
+// 13. Error Handling Demo
 function demoErrorHandling(isValid) {
     try {
         if (!isValid)
@@ -163,7 +163,7 @@ function demoErrorHandling(isValid) {
         }
     }
 }
-// Modern JavaScript Features Demo
+// 14. Modern JavaScript Features Demo
 function demoModernFeatures() {
     var _a, _b, _c, _d, _e, _f;
     const obj = { a: { b: { c: "Hello" } } };
