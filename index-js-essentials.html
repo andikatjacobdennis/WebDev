@@ -3,237 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Essentials</title>
+    <title>JavaScript Demos</title>
     <style>
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Arial, sans-serif;
         line-height: 1.6;
-        color: #333;
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #f5f7fa;
       }
-      h1,
-      h2,
-      h3 {
-        color: #2c3e50;
-      }
-      h1 {
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 10px;
+      .demo-section {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
       }
       h2 {
-        margin-top: 30px;
-        color: #2980b9;
-      }
-      .section {
-        background: white;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .demo-area {
-        background: #f8f9fa;
-        border-left: 4px solid #3498db;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 0 4px 4px 0;
+        color: #333;
+        margin-top: 0;
       }
       button {
-        background: #3498db;
+        background-color: #2c387e;
         color: white;
+        padding: 8px 16px;
         border: none;
-        padding: 8px 15px;
         border-radius: 4px;
         cursor: pointer;
-        margin: 5px 0;
-        transition: background 0.3s;
+        margin-right: 10px;
       }
       button:hover {
-        background: #2980b9;
+        background-color: #3f51b5;
       }
       pre {
-        background: #2c3e50;
-        color: #ecf0f1;
-        padding: 15px;
+        background-color: #f5f5f5;
+        padding: 10px;
         border-radius: 4px;
         overflow-x: auto;
       }
       .result {
-        padding: 10px;
-        background: #e8f4f8;
-        border: 1px solid #bdc3c7;
-        border-radius: 4px;
         margin-top: 10px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-      }
-      .card {
-        background: white;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: #e9e9e9;
+        border-radius: 4px;
+        min-height: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>JavaScript Essentials</h1>
-    <p>
-      This page demonstrates key JavaScript concepts that every JavaScript dev
-      should know.
-    </p>
+    <h1>JavaScript Demos</h1>
 
-    <!-- Core JavaScript Concepts -->
-    <div class="section">
-      <h2>1. Core JavaScript Concepts</h2>
-
-      <h3>Class Inheritance</h3>
-      <div class="demo-area">
-        <button onclick="demoInheritance()">Run Inheritance Demo</button>
-        <div id="inheritanceResult" class="result"></div>
-      </div>
-
-      <h3>Closures</h3>
-      <div class="demo-area">
-        <button onclick="demoClosure()">Run Closure Demo</button>
-        <div id="closureResult" class="result"></div>
-      </div>
+    <div class="demo-section">
+      <h2>1. Class Inheritance</h2>
+      <p>Demonstrates class inheritance with Animal and Dog classes.</p>
+      <button onclick="demoInheritance()">Run Demo</button>
+      <div id="inheritanceResult" class="result"></div>
     </div>
 
-    <!-- Asynchronous Programming -->
-    <div class="section">
-      <h2>2. Asynchronous Programming</h2>
-
-      <h3>Promises and Async/Await</h3>
-      <div class="demo-area">
-        <button onclick="demoAsync()">Run Async Demo (80% success rate)</button>
-        <div id="asyncResult" class="result"></div>
-      </div>
-
-      <h3>Promise.all</h3>
-      <div class="demo-area">
-        <button onclick="demoPromiseAll()">Run Promise.all Demo</button>
-        <div id="promiseAllResult" class="result"></div>
-      </div>
+    <div class="demo-section">
+      <h2>2. Closure</h2>
+      <p>Demonstrates closures with a counter function.</p>
+      <button onclick="demoClosure()">Run Demo</button>
+      <div id="closureResult" class="result"></div>
     </div>
 
-    <!-- Functional Programming -->
-    <div class="section">
-      <h2>3. Functional Programming</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Pure Functions</h3>
-          <div class="demo-area">
-            <button onclick="demoPureFunction()">Run Pure Function</button>
-            <div id="pureFunctionResult" class="result"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Function Composition</h3>
-          <div class="demo-area">
-            <button onclick="demoComposition()">Run Composition</button>
-            <div id="compositionResult" class="result"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Immutability</h3>
-          <div class="demo-area">
-            <button onclick="demoImmutability()">Run Immutability Demo</button>
-            <div id="immutabilityResult" class="result"></div>
-          </div>
-        </div>
-      </div>
+    <div class="demo-section">
+      <h2>3. Async/Await</h2>
+      <p>Demonstrates async/await with a simulated async operation.</p>
+      <button onclick="demoAsync()">Run Demo</button>
+      <div id="asyncResult" class="result"></div>
     </div>
 
-    <!-- Design Patterns -->
-    <div class="section">
-      <h2>4. Design Patterns</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Singleton</h3>
-          <div class="demo-area">
-            <button onclick="demoSingleton()">Run Singleton Demo</button>
-            <div id="singletonResult" class="result"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Factory</h3>
-          <div class="demo-area">
-            <button onclick="demoFactory()">Run Factory Demo</button>
-            <div id="factoryResult" class="result"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Observer</h3>
-          <div class="demo-area">
-            <button onclick="demoObserver()">Run Observer Demo</button>
-            <div id="observerResult" class="result"></div>
-          </div>
-        </div>
-      </div>
+    <div class="demo-section">
+      <h2>4. Promise.all</h2>
+      <p>Demonstrates Promise.all with multiple promises.</p>
+      <button onclick="demoPromiseAll()">Run Demo</button>
+      <div id="promiseAllResult" class="result"></div>
     </div>
 
-    <!-- Performance Optimization -->
-    <div class="section">
-      <h2>6. Performance Optimization</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Memoization</h3>
-          <div class="demo-area">
-            <button onclick="demoMemoization()">Run Memoization Demo</button>
-            <div id="memoizationResult" class="result"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Debouncing</h3>
-          <div class="demo-area">
-            <button id="debounceButton">
-              Click me rapidly (debounced at 500ms)
-            </button>
-            <div id="debounceResult" class="result">
-              Button clicks will appear here after 500ms pause
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="demo-section">
+      <h2>5. Pure Function</h2>
+      <p>Demonstrates a pure function (add) with no side effects.</p>
+      <button onclick="demoPureFunction()">Run Demo</button>
+      <div id="pureFunctionResult" class="result"></div>
     </div>
 
-    <!-- Error Handling -->
-    <div class="section">
-      <h2>5. Error Handling</h2>
-
-      <div class="demo-area">
-        <h3>Custom Error Handling</h3>
-        <button onclick="demoErrorHandling(true)">Run with Valid Input</button>
-        <button onclick="demoErrorHandling(false)">
-          Run with Invalid Input
-        </button>
-        <div id="errorHandlingResult" class="result"></div>
-      </div>
+    <div class="demo-section">
+      <h2>6. Function Composition</h2>
+      <p>Demonstrates function composition with double and square functions.</p>
+      <button onclick="demoComposition()">Run Demo</button>
+      <div id="compositionResult" class="result"></div>
     </div>
 
-    <!-- Modern JavaScript Features -->
-    <div class="section">
-      <h2>10. Modern JavaScript Features</h2>
+    <div class="demo-section">
+      <h2>7. Immutability</h2>
+      <p>
+        Demonstrates immutability by creating new arrays instead of modifying
+        existing ones.
+      </p>
+      <button onclick="demoImmutability()">Run Demo</button>
+      <div id="immutabilityResult" class="result"></div>
+    </div>
 
-      <div class="demo-area">
-        <h3>Optional Chaining and Nullish Coalescing</h3>
-        <button onclick="demoModernFeatures()">Run Demo</button>
-        <div id="modernFeaturesResult" class="result"></div>
-      </div>
+    <div class="demo-section">
+      <h2>8. Singleton</h2>
+      <p>
+        Demonstrates the Singleton pattern ensuring only one instance exists.
+      </p>
+      <button onclick="demoSingleton()">Run Demo</button>
+      <div id="singletonResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>9. Factory</h2>
+      <p>Demonstrates the Factory pattern for creating objects.</p>
+      <button onclick="demoFactory()">Run Demo</button>
+      <div id="factoryResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>10. Observer</h2>
+      <p>Demonstrates the Observer pattern for event notification.</p>
+      <button onclick="demoObserver()">Run Demo</button>
+      <div id="observerResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>11. Performance Optimization - Memoization</h2>
+      <p>Demonstrates memoization with a factorial function.</p>
+      <button onclick="demoMemoization()">Run Demo</button>
+      <div id="memoizationResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>12. Debouncing</h2>
+      <p>Demonstrates debouncing to limit rapid button clicks.</p>
+      <button id="debounceButton">Click Me (Debounced)</button>
+      <div id="debounceResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>13. Error Handling</h2>
+      <p>Demonstrates try/catch error handling.</p>
+      <button onclick="demoErrorHandling(true)">Valid Input</button>
+      <button onclick="demoErrorHandling(false)">Invalid Input</button>
+      <div id="errorHandlingResult" class="result"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>14. Modern JavaScript Features</h2>
+      <p>Demonstrates optional chaining and nullish coalescing.</p>
+      <button onclick="demoModernFeatures()">Run Demo</button>
+      <div id="modernFeaturesResult" class="result"></div>
     </div>
 
     <script src="assets/js/main.js"></script>

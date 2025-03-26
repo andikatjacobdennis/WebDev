@@ -1,5 +1,5 @@
 // Simple test to verify the script loaded
-console.log("Main TS loaded");
+console.log("Main JS loaded");
 
 // 1. Class Inheritance Demo
 function demoInheritance(): void {
@@ -190,7 +190,7 @@ function demoObserver(): void {
   subject.notify("New data available!");
 }
 
-// Performance Optimization - Memoization Demo
+// 11. Performance Optimization - Memoization Demo
 const memoizeFactorial = (function () {
   const cache: Record<number, number> = {};
 
@@ -212,7 +212,7 @@ function demoMemoization(): void {
   )!.innerText = `Factorial of 5 (memoized): ${result1}`;
 }
 
-// Debouncing implementation
+// 12. Debouncing implementation
 let debounceTimeout: number;
 
 document.getElementById("debounceButton")!.addEventListener("click", () => {
@@ -222,7 +222,7 @@ document.getElementById("debounceButton")!.addEventListener("click", () => {
   }, 500);
 });
 
-// Error Handling Demo
+// 13. Error Handling Demo
 function demoErrorHandling(isValid: boolean): void {
   try {
     if (!isValid) throw new Error("Invalid input provided");
@@ -235,7 +235,7 @@ function demoErrorHandling(isValid: boolean): void {
   }
 }
 
-// Modern JavaScript Features Demo
+// 14. Modern JavaScript Features Demo
 function demoModernFeatures(): void {
   interface NestedObject {
     a?: {
